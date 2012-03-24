@@ -1,62 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>Base Test Runner</title>
+	<meta charset="utf-8">
+	<title>
+		Unit Tests
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="ja.mesbrown Blog Post Example">
+	<meta name="author" content="James Brown">
 	
-	<link rel="stylesheet" type="text/css" href="../_src/css/lib/qunit.css">
+	<!-- Le styles -->
+	<link href="/_src/css/lib/bootstrap.min.css" rel="stylesheet">
+	<link href="/_src/css/style.css" rel="stylesheet">
+	<style>
+		body {
+		    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+		}
+	</style>
+	<link href="/_src/css/lib/bootstrap-responsive.min.css" rel="stylesheet">
 	
+	<script src="_src/lib/modernizr-2.5.3.min.js"></script>
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-header">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="/">
+					Exploring Backbone.Mutators
+				</a>
+				<div class="nav-collapse nav-header">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li class="active"><a href="/_test/">Tests</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="body">
+		<div class="container">
+			<div class="row">
+			    <div class="span12">
+			        <h2>Unit Tests</h2>
+			    </div>
+			</div>
+			
+			<div class="row">
+			    <div class="span5">
+					<ul>
+						<li><a href="team.html">Team Tests</a></li>
+						<li><a href="player.html">Player Tests</a></li>
+					</ul>
+
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="navbar bottom-bar">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-footer">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="brand">
+					&copy; 2012 James Brown
+				</div>
+				<div class="nav-collapse nav-footer">
+					<ul class="nav">
+						<li><a href="/">Home</a></li>
+						<li class="active"><a href="/_test/">Tests</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/lib/jquery-1.7.1.min.js"><\/script>')</script>
+	
+	<script src="/_src/js/lib/bootstrap.min.js"></script>
 	<script src="/_src/js/namespace.js"></script>
 	
-	<script type='text/javascript' src='../_src/js/lib/jquery-1.7.1.js'></script>
-	
-	<script type='text/javascript' src="../_src/js/lib/qunit.js"></script>
-	<script type='text/javascript' src="../_src/js/lib/sinon-1.3.1.js"></script>
-	<script type='text/javascript' src="../_src/js/lib/pavlov.js"></script>
-	
-	
-	<script type='text/javascript' src="../_src/js/lib/underscore-1.3.1.js"></script>
-	<script type='text/javascript' src="../_src/js/lib/backbone-0.9.2.js"></script>
-	
-	<script type='text/javascript'>
-	window.ibjhb.mvc.view.Person = Backbone.View.extend({
-	    className : 'view.person'
-	    ,el : $('<div>')
-	    ,initialize : function(){
-			
-		}
-		,run : function(){
-			this.update();
-		}
-		,update	: function(){
-			alert('update function')
-		}
-	});
-	
-	QUnit.specify.globalApi = true;
-	QUnit.specify("view.person tests", function(){
-	
-	    describe("view.person tests", function(){
-	        before(function(){
-	            this.SUT = new window.ibjhb.mvc.view.Person({});
-	            this.stub = sinon.stub(SUT, 'update');
-	        });
-	        it('testing function stub', function(){
-	            SUT.run();
-	            assert(SUT.className).equals('view.person');
-	            assert(stub.calledOnce).equals(true);
-	        });
-	    });
-	});
-	</script>
-
-</head>
-<body>
-	<h1 id="qunit-header">QUnit example</h1>
-	<h2 id="qunit-banner"></h2>
-	<div id="qunit-testrunner-toolbar"></div>
-	<h2 id="qunit-userAgent"></h2>
-	<ol id="qunit-tests"></ol>
-	<div id="qunit-fixture"></div>
 </body>
 </html>
